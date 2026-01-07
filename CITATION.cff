@@ -1,0 +1,95 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+type: software
+title: "Semantic Unit: A Framework for Deterministic AI Testing"
+abstract: >-
+  Semantic Unit provides a novel framework for deterministic evaluation of 
+  large language model outputs through semantic drift detection and 
+  distributional alignment analysis. The framework implements zero-shot 
+  semantic comparison in latent space, enabling reproducible quality 
+  assurance for AI systems. By quantifying semantic entropy and factual 
+  fidelity, Semantic Unit addresses the critical challenge of non-deterministic 
+  evaluation in production AI applications.
+authors:
+  - family-names: "Dasari"
+    given-names: "Chaitanya Kumar"
+    email: chaitanyakumar435@outlook.com
+    affiliation: "Independent Researcher / Your Affiliation"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+version: 0.1.0
+date-released: 2026-01-07
+url: "https://github.com/yourusername/semantic-unit"
+repository-code: "https://github.com/yourusername/semantic-unit"
+license: MIT
+keywords:
+  - machine-learning
+  - natural-language-processing
+  - semantic-analysis
+  - ai-evaluation
+  - llm-testing
+  - drift-detection
+  - quality-assurance
+  - deterministic-evaluation
+  - semantic-alignment
+preferred-citation:
+  type: software
+  title: "Semantic Unit: A Framework for Deterministic AI Testing"
+  authors:
+    - family-names: "Dasari"
+      given-names: "Chaitanya Kumar"
+      email: your.email@example.com
+      affiliation: "Independent Researcher / Your Affiliation"
+  year: 2026
+  url: "https://github.com/yourusername/semantic-unit"
+  notes: "Open-source framework for semantic drift detection in AI systems"
+references:
+  - type: article
+    title: "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment"
+    authors:
+      - family-names: "Liu"
+        given-names: "Yang"
+      - family-names: "Iter"
+        given-names: "Dan"
+      - family-names: "Xu"
+        given-names: "Yichong"
+      - family-names: "Wang"
+        given-names: "Shuohang"
+      - family-names: "Xu"
+        given-names: "Ruochen"
+      - family-names: "Zhu"
+        given-names: "Chenguang"
+    year: 2023
+    journal: "arXiv preprint"
+    notes: "arXiv:2303.16634"
+  - type: conference-paper
+    title: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"
+    authors:
+      - family-names: "Zheng"
+        given-names: "Lianmin"
+      - family-names: "Chiang"
+        given-names: "Wei-Lin"
+      - family-names: "Sheng"
+        given-names: "Ying"
+      - family-names: "Zhuang"
+        given-names: "Siyuan"
+      - family-names: "Wu"
+        given-names: "Zhanghao"
+      - family-names: "Zhuang"
+        given-names: "Yonghao"
+      - family-names: "Lin"
+        given-names: "Zi"
+      - family-names: "Li"
+        given-names: "Zhuohan"
+      - family-names: "Li"
+        given-names: "Dacheng"
+      - family-names: "Xing"
+        given-names: "Eric"
+      - family-names: "Zhang"
+        given-names: "Hao"
+      - family-names: "Gonzalez"
+        given-names: "Joseph E."
+      - family-names: "Stoica"
+        given-names: "Ion"
+    year: 2023
+    conference: "Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)"
+    collection-title: "Datasets and Benchmarks Track"
