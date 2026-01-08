@@ -8,7 +8,7 @@ and expected text outputs.
 
 import json
 import os
-from typing import Optional, Dict, Any
+from typing import Any, Optional
 
 import litellm
 from dotenv import load_dotenv
@@ -133,13 +133,15 @@ Return ONLY valid JSON in this exact format:
         elif not os.getenv("OPENAI_API_KEY") and not os.getenv("SEMANTIC_UNIT_API_KEY"):
             # Allow initialization without key for testing, but will fail on actual calls
             pass
-        elif os.getenv("SEMANTIC_UNIT_API_KEY"):
-            os.environ["OPENAI_API_KEY"] = os.getenv("SEMANTIC_UNIT_API_KEY")
+        else:
+            semantic_key = os.getenv("SEMANTIC_UNIT_API_KEY")
+            if semantic_key:
+                os.environ["OPENAI_API_KEY"] = semantic_key
 
         self.system_prompt = self.SYSTEM_PROMPT
 
     def evaluate(
-        self, actual: str, expected: str, metadata: Optional[Dict[str, Any]] = None
+        self, actual: str, expected: str, metadata: Optional[dict[str, Any]] = None
     ) -> DriftResult:
         """
         Evaluate semantic drift between actual and expected text outputs.
@@ -252,9 +254,9 @@ Return ONLY valid JSON in this exact format:
             )
 
         except json.JSONDecodeError as e:
-            raise RuntimeError(f"Failed to parse LLM response as JSON: {e}")
+            raise RuntimeError(f"Failed to parse LLM response as JSON: {e}") from e
         except Exception as e:
-            raise RuntimeError(f"Semantic evaluation failed: {e}")
+            raise RuntimeError(f"Semantic evaluation failed: {e}") from e
 
     def _construct_prompt(self, actual: str, expected: str) -> str:
         """
@@ -291,7 +293,7 @@ Analyze:
 Provide your evaluation as JSON with 'score' and 'reasoning' fields."""
 
     def batch_evaluate(
-        self, pairs: list[tuple[str, str]], metadata: Optional[Dict[str, Any]] = None
+        self, pairs: list[tuple[str, str]], metadata: Optional[dict[str, Any]] = None
     ) -> list[DriftResult]:
         """
         Evaluate multiple actual-expected text pairs in batch.

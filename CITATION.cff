@@ -3,19 +3,19 @@ message: "If you use this software in your research, please cite it as below."
 type: software
 title: "Semantic Unit: A Framework for Deterministic AI Testing"
 abstract: >-
-  Semantic Unit provides a novel framework for deterministic evaluation of 
-  large language model outputs through semantic drift detection and 
-  distributional alignment analysis. The framework implements zero-shot 
-  semantic comparison in latent space, enabling reproducible quality 
-  assurance for AI systems. By quantifying semantic entropy and factual 
-  fidelity, Semantic Unit addresses the critical challenge of non-deterministic 
+  Semantic Unit provides a novel framework for deterministic evaluation of
+  large language model outputs through semantic drift detection and
+  distributional alignment analysis. The framework implements zero-shot
+  semantic comparison in latent space, enabling reproducible quality
+  assurance for AI systems. By quantifying semantic entropy and factual
+  fidelity, Semantic Unit addresses the critical challenge of non-deterministic
   evaluation in production AI applications.
 authors:
   - family-names: "Dasari"
     given-names: "Chaitanya Kumar"
     email: chaitanyakumar435@outlook.com
-    affiliation: "Independent Researcher / Your Affiliation"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Independent Researcher"
+    orcid: "https://orcid.org/0009-0002-8935-6232"
 version: 0.1.0
 date-released: 2026-01-07
 url: "https://github.com/chaitanyakumar-d/semantic-unit"
@@ -37,8 +37,8 @@ preferred-citation:
   authors:
     - family-names: "Dasari"
       given-names: "Chaitanya Kumar"
-      email: your.email@example.com
-      affiliation: "Independent Researcher / Your Affiliation"
+      email: chaitanyakumar435@outlook.com
+      affiliation: "Independent Researcher"
   year: 2026
   url: "https://github.com/chaitanyakumar-d/semantic-unit"
   notes: "Open-source framework for unit testing AI agents and preventing hallucinations"

@@ -6,6 +6,7 @@ This module contains unit tests for Pydantic models used in semantic evaluation.
 
 import pytest
 from pydantic import ValidationError
+
 from semantic_unit.core.models import DriftResult
 
 

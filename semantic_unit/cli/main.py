@@ -5,17 +5,15 @@ This module defines the primary CLI application using Typer.
 """
 
 import json
-import sys
 from pathlib import Path
 from typing import Optional
 
 import typer
 from rich.console import Console
-from rich.table import Table
 from rich.panel import Panel
-from rich import print as rprint
+from rich.table import Table
 
-from semantic_unit import SemanticJudge, DriftResult
+from semantic_unit import SemanticJudge
 
 app = typer.Typer(
     name="semantic-unit",
@@ -135,7 +133,7 @@ def evaluate(
 
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {e}", style="red")
-        raise typer.Exit(code=1)
+        raise typer.Exit(code=1) from e
 
 
 @app.command()
@@ -190,7 +188,7 @@ def batch(
         min_score = min(r.score for r in results)
         max_score = max(r.score for r in results)
 
-        console.print(f"\n[bold cyan]Summary Statistics:[/bold cyan]")
+        console.print("\n[bold cyan]Summary Statistics:[/bold cyan]")
         console.print(f"  Average Score: {avg_score:.3f}")
         console.print(f"  Min Score: {min_score:.3f}")
         console.print(f"  Max Score: {max_score:.3f}")
@@ -203,7 +201,7 @@ def batch(
 
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {e}", style="red")
-        raise typer.Exit(code=1)
+        raise typer.Exit(code=1) from e
 
 
 if __name__ == "__main__":

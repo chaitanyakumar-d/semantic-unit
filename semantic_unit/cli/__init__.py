@@ -6,4 +6,4 @@ an excellent user experience.
 """
 
 # CLI commands will be exported here
-__all__ = []
+__all__: list[str] = []
