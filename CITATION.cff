@@ -20,7 +20,7 @@ version: 0.1.0
 date-released: 2026-01-07
 url: "https://github.com/chaitanyakumar-d/semantic-unit"
 repository-code: "https://github.com/chaitanyakumar-d/semantic-unit"
-license: MIT
+license: Apache-2.0
 keywords:
   - machine-learning
   - natural-language-processing

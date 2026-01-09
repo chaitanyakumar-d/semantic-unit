@@ -261,7 +261,7 @@ For research collaborations, benchmark requests, or methodological questions, co
 
 ## License
 
-By contributing to Semantic Unit, you agree that your contributions will be licensed under the MIT License. You represent that you have the legal right to make your contributions.
+By contributing to Semantic Unit, you agree that your contributions will be licensed under the Apache License 2.0. You represent that you have the legal right to make your contributions.
 
 ## Acknowledgments
 
