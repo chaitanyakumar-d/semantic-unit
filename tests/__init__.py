@@ -1,5 +1,5 @@
 """
-Test suite for Semantic Unit.
+Test suite for SemanticTest.
 
-This package contains all tests for the semantic_unit package.
+This package contains all tests for the semantictest package.
 """

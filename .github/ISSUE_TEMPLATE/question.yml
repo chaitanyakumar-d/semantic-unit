@@ -1,5 +1,5 @@
 name: ❓ Question / Help
-description: Ask a question or get help with Semantic Unit
+description: Ask a question or get help with SemanticTest
 title: "[Question]: "
 labels: ["question", "help wanted"]
 body:
@@ -8,7 +8,7 @@ body:
       value: |
         Have a question? We're here to help! Please provide as much detail as possible.
 
-        💡 **Tip**: Check the [README](https://github.com/chaitanyakumar-d/semantic-unit#readme) first for common usage patterns.
+        💡 **Tip**: Check the [README](https://github.com/chaitanyakumar-d/semantictest#readme) first for common usage patterns.
 
   - type: textarea
     id: question

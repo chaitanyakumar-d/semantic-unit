@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a feature! We appreciate your input to make Semantic Unit better.
+        Thanks for suggesting a feature! We appreciate your input to make SemanticTest better.
 
   - type: textarea
     id: problem
@@ -41,7 +41,7 @@ body:
       render: python
       placeholder: |
         # Example usage
-        from semantic_unit import SemanticJudge
+        from semantictest import SemanticJudge
 
         judge = SemanticJudge()
         # Your proposed API...

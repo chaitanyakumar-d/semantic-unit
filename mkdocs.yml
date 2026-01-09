@@ -1,0 +1,197 @@
+# MkDocs Configuration for SemanticTest Documentation
+# https://www.mkdocs.org/user-guide/configuration/
+
+site_name: SemanticTest
+site_url: https://chaitanyakumar-d.github.io/semantictest/
+site_description: Unit Testing for AI Agents - Test meaning, not syntax
+site_author: Chaitanya Kumar Dasari
+copyright: Copyright &copy; 2024-2026 Chaitanya Kumar Dasari
+
+repo_name: chaitanyakumar-d/semantictest
+repo_url: https://github.com/chaitanyakumar-d/semantictest
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  favicon: assets/favicon.png
+  logo: assets/logo.png
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+    - announce.dismiss
+
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      separator: '[\s\-\.]'
+      lang: en
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_category_heading: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            members_order: source
+            merge_init_into_class: true
+            separate_signature: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            line_length: 80
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: chaitanyakumar-d
+      repo: semantictest
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chaitanyakumar-d
+      name: GitHub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/semantictest/
+      name: PyPI
+
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Replace with your GA4 ID
+
+  version:
+    provider: mike
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation. With your consent,
+      you're helping us to make our documentation better.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - User Guide:
+    - user-guide/index.md
+    - Core Concepts: user-guide/concepts.md
+    - LLM Providers: user-guide/providers.md
+    - CLI Reference: user-guide/cli.md
+    - Testing Integration: user-guide/testing.md
+    - Best Practices: user-guide/best-practices.md
+  - API Reference:
+    - api/index.md
+    - SemanticJudge: api/semantic-judge.md
+    - Models: api/models.md
+    - CLI: api/cli.md
+  - Examples:
+    - examples/index.md
+    - Basic Usage: examples/basic.md
+    - Pytest Integration: examples/pytest.md
+    - Production Monitoring: examples/monitoring.md
+    - RAG Validation: examples/rag.md
+  - Contributing:
+    - contributing/index.md
+    - Development Setup: contributing/setup.md
+    - Guidelines: contributing/guidelines.md
+    - Code of Conduct: contributing/code-of-conduct.md
+  - Changelog: changelog.md

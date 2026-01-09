@@ -9,8 +9,8 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from semantic_unit.core.engine import SemanticJudge
-from semantic_unit.core.models import DriftResult
+from semantictest.core.engine import SemanticJudge
+from semantictest.core.models import DriftResult
 
 
 class TestSemanticJudge:
@@ -43,15 +43,15 @@ class TestSemanticJudge:
         with pytest.raises(ValueError, match="Expected text cannot be empty"):
             judge.evaluate("actual text", "")
 
-    @patch("semantic_unit.core.engine.litellm.completion")
+    @patch("semantictest.core.engine.litellm.completion")
     def test_evaluate_success(self, mock_completion):
         """Test successful semantic evaluation."""
         # Mock LiteLLM response
         mock_response = Mock()
         mock_response.choices = [Mock()]
-        mock_response.choices[0].message.content = (
-            '{"score": 0.95, "reasoning": "High semantic alignment observed"}'
-        )
+        mock_response.choices[
+            0
+        ].message.content = '{"score": 0.95, "reasoning": "High semantic alignment observed"}'
         mock_response.usage.total_tokens = 150
         mock_completion.return_value = mock_response
 
@@ -67,14 +67,14 @@ class TestSemanticJudge:
         assert result.expected == "The test was successful"
         assert result.model == "gpt-4o-mini"
 
-    @patch("semantic_unit.core.engine.litellm.completion")
+    @patch("semantictest.core.engine.litellm.completion")
     def test_evaluate_with_metadata(self, mock_completion):
         """Test evaluation with custom metadata."""
         mock_response = Mock()
         mock_response.choices = [Mock()]
-        mock_response.choices[0].message.content = (
-            '{"score": 0.88, "reasoning": "Minor drift detected"}'
-        )
+        mock_response.choices[
+            0
+        ].message.content = '{"score": 0.88, "reasoning": "Minor drift detected"}'
         mock_response.usage.total_tokens = 120
         mock_completion.return_value = mock_response
 
@@ -90,7 +90,7 @@ class TestSemanticJudge:
         assert result.metadata["task"] == "classification"
         assert result.metadata["domain"] == "medical"
 
-    @patch("semantic_unit.core.engine.litellm.completion")
+    @patch("semantictest.core.engine.litellm.completion")
     def test_evaluate_invalid_json(self, mock_completion):
         """Test handling of invalid JSON response."""
         mock_response = Mock()
@@ -102,7 +102,7 @@ class TestSemanticJudge:
         with pytest.raises(RuntimeError, match="Failed to parse LLM response"):
             judge.evaluate("actual", "expected")
 
-    @patch("semantic_unit.core.engine.litellm.completion")
+    @patch("semantictest.core.engine.litellm.completion")
     def test_evaluate_missing_fields(self, mock_completion):
         """Test handling of response missing required fields."""
         mock_response = Mock()
@@ -114,7 +114,7 @@ class TestSemanticJudge:
         with pytest.raises(RuntimeError, match="Semantic evaluation failed"):
             judge.evaluate("actual", "expected")
 
-    @patch("semantic_unit.core.engine.litellm.completion")
+    @patch("semantictest.core.engine.litellm.completion")
     def test_batch_evaluate(self, mock_completion):
         """Test batch evaluation of multiple pairs."""
         mock_response = Mock()

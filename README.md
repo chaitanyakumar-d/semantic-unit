@@ -1,12 +1,12 @@
-# Semantic Unit: Unit Testing for AI Agents
+# SemanticTest: Unit Testing for AI Agents
 
-[![Tests](https://github.com/chaitanyakumar-d/semantic-unit/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/semantic-unit/actions/workflows/tests.yml)
+[![Tests](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/chaitanyakumar-d/semantic-unit?style=social)](https://github.com/chaitanyakumar-d/semantic-unit)
+[![GitHub stars](https://img.shields.io/github/stars/chaitanyakumar-d/semantictest?style=social)](https://github.com/chaitanyakumar-d/semantictest)
 
 > **Stop your AI from hallucinating in production with one line of code.**
 
@@ -27,7 +27,7 @@ AI outputs are **never** identical, even when correct. Your tests shouldn't brea
 ## The Solution
 
 ```python
-from semantic_unit import SemanticJudge
+from semantictest import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate(
@@ -38,7 +38,7 @@ result = judge.evaluate(
 assert result.score > 0.8  # ✅ Tests meaning, not exact words
 ```
 
-## Why Semantic Unit?
+## Why SemanticTest?
 
 - 🎯 **Test Meaning, Not Words**: Assert on semantic correctness, not string equality
 - 🛡️ **Prevent Hallucinations**: Catch AI drift before it reaches users
@@ -50,14 +50,14 @@ assert result.score > 0.8  # ✅ Tests meaning, not exact words
 ## Installation
 
 ```bash
-pip install semantic-unit
+pip install semantictest
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/chaitanyakumar-d/semantic-unit.git
-cd semantic-unit
+git clone https://github.com/chaitanyakumar-d/semantictest.git
+cd semantictest
 pip install -e .
 ```
 
@@ -74,7 +74,7 @@ pip install -e ".[dev]"
 **1. Testing AI Responses:**
 
 ```python
-from semantic_unit import SemanticJudge
+from semantictest import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -95,7 +95,7 @@ else:
 
 ```python
 import pytest
-from semantic_unit import SemanticJudge
+from semantictest import SemanticJudge
 
 @pytest.fixture
 def judge():
@@ -120,13 +120,13 @@ def test_ai_summarization(judge):
 
 ```bash
 # Quick evaluation
-semantic-unit evaluate "AI said this" "Should mean this"
+semantictest evaluate "AI said this" "Should mean this"
 
 # Batch testing
-semantic-unit batch test_cases.json --output results.json
+semantictest batch test_cases.json --output results.json
 
 # With custom model
-semantic-unit evaluate "text" "expected" --model gpt-4
+semantictest evaluate "text" "expected" --model gpt-4
 ```
 
 ## Real-World Use Cases
@@ -169,7 +169,7 @@ avg_score = sum(r.score for r in results) / len(results)
 assert avg_score > 0.8, "Fine-tuning degraded performance"
 ```
 
-## Who Uses Semantic Unit?
+## Who Uses SemanticTest?
 
 - **AI Engineers**: Testing LLM applications and agents
 - **QA Teams**: Automated testing of AI features
@@ -197,7 +197,7 @@ AZURE_API_BASE=https://your-resource.openai.azure.com
 
 ### Supported LLM Providers
 
-Semantic Unit supports **100+ LLMs** via LiteLLM:
+SemanticTest supports **100+ LLMs** via LiteLLM:
 
 | Provider | Models | Environment Variable |
 |----------|--------|---------------------|
@@ -213,7 +213,7 @@ Semantic Unit supports **100+ LLMs** via LiteLLM:
 ### Usage Examples
 
 ```python
-from semantic_unit import SemanticJudge
+from semantictest import SemanticJudge
 
 # OpenAI (default)
 judge = SemanticJudge(model="gpt-4o-mini")
@@ -243,8 +243,8 @@ print(SemanticJudge.list_supported_models())
 
 ```bash
 # Clone repository
-git clone https://github.com/chaitanyakumar-d/semantic-unit.git
-cd semantic-unit
+git clone https://github.com/chaitanyakumar-d/semantictest.git
+cd semantictest
 
 # Create virtual environment
 python -m venv venv
@@ -264,7 +264,7 @@ pre-commit install
 pytest
 
 # Run with coverage
-pytest --cov=semantic_unit
+pytest --cov=semantictest
 
 # Run specific test file
 pytest tests/test_core.py
@@ -274,13 +274,13 @@ pytest tests/test_core.py
 
 ```bash
 # Format code
-black semantic_unit tests
+black semantictest tests
 
 # Lint code
-ruff check semantic_unit tests
+ruff check semantictest tests
 
 # Type checking
-mypy semantic_unit
+mypy semantictest
 ```
 
 ## Contributing
@@ -298,7 +298,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 **AI is everywhere, but testing AI is broken.**
 
 - Traditional tests: `assert output == expected` ❌
-- Semantic Unit: `assert meaning_matches(output, expected)` ✅
+- SemanticTest: `assert meaning_matches(output, expected)` ✅
 
 **The difference?** Your AI can now:
 - Paraphrase freely without breaking tests
@@ -307,9 +307,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Repository & Links
 
-- **GitHub**: https://github.com/chaitanyakumar-d/semantic-unit
-- **Issues**: https://github.com/chaitanyakumar-d/semantic-unit/issues
-- **Discussions**: https://github.com/chaitanyakumar-d/semantic-unit/discussions
+- **GitHub**: https://github.com/chaitanyakumar-d/semantictest
+- **Issues**: https://github.com/chaitanyakumar-d/semantictest/issues
+- **Discussions**: https://github.com/chaitanyakumar-d/semantictest/discussions
 
 ## Roadmap
 

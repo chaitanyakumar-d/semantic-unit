@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this software in your research, please cite it as below."
 type: software
-title: "Semantic Unit: A Framework for Deterministic AI Testing"
+title: "SemanticTest: A Framework for Deterministic AI Testing"
 abstract: >-
-  Semantic Unit provides a novel framework for deterministic evaluation of
+  SemanticTest provides a novel framework for deterministic evaluation of
   large language model outputs through semantic drift detection and
   distributional alignment analysis. The framework implements zero-shot
   semantic comparison in latent space, enabling reproducible quality
   assurance for AI systems. By quantifying semantic entropy and factual
-  fidelity, Semantic Unit addresses the critical challenge of non-deterministic
+  fidelity, SemanticTest addresses the critical challenge of non-deterministic
   evaluation in production AI applications.
 authors:
   - family-names: "Dasari"
@@ -18,8 +18,8 @@ authors:
     orcid: "https://orcid.org/0009-0002-8935-6232"
 version: 0.1.0
 date-released: 2026-01-07
-url: "https://github.com/chaitanyakumar-d/semantic-unit"
-repository-code: "https://github.com/chaitanyakumar-d/semantic-unit"
+url: "https://github.com/chaitanyakumar-d/semantictest"
+repository-code: "https://github.com/chaitanyakumar-d/semantictest"
 license: Apache-2.0
 keywords:
   - machine-learning
@@ -33,14 +33,14 @@ keywords:
   - semantic-alignment
 preferred-citation:
   type: software
-  title: "Semantic Unit: A Framework for Deterministic AI Testing"
+  title: "SemanticTest: A Framework for Deterministic AI Testing"
   authors:
     - family-names: "Dasari"
       given-names: "Chaitanya Kumar"
       email: chaitanyakumar435@outlook.com
       affiliation: "Independent Researcher"
   year: 2026
-  url: "https://github.com/chaitanyakumar-d/semantic-unit"
+  url: "https://github.com/chaitanyakumar-d/semantictest"
   notes: "Open-source framework for unit testing AI agents and preventing hallucinations"
 references:
   - type: article

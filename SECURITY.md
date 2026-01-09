@@ -8,7 +8,7 @@
 
 ## Reporting a Vulnerability
 
-We take security seriously. If you discover a security vulnerability in Semantic Unit, please report it responsibly.
+We take security seriously. If you discover a security vulnerability in SemanticTest, please report it responsibly.
 
 ### How to Report
 
@@ -49,14 +49,14 @@ Security issues we're interested in:
 
 ### Recognition
 
-We appreciate security researchers who help keep Semantic Unit secure. With your permission, we'll acknowledge your contribution in our release notes.
+We appreciate security researchers who help keep SemanticTest secure. With your permission, we'll acknowledge your contribution in our release notes.
 
 ## Security Best Practices
 
-When using Semantic Unit:
+When using SemanticTest:
 
 1. **Never commit API keys** - Use environment variables or `.env` files
-2. **Keep dependencies updated** - Run `pip install --upgrade semantic-unit`
+2. **Keep dependencies updated** - Run `pip install --upgrade semantictest`
 3. **Use minimal permissions** - Only grant necessary API access
 4. **Monitor usage** - Track API calls and costs
 
@@ -64,4 +64,4 @@ When using Semantic Unit:
 
 For security concerns: chaitanyakumar435@outlook.com
 
-For general issues: [GitHub Issues](https://github.com/chaitanyakumar-d/semantic-unit/issues)
+For general issues: [GitHub Issues](https://github.com/chaitanyakumar-d/semantictest/issues)

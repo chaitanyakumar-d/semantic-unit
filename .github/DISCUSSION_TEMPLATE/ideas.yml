@@ -7,14 +7,14 @@ body:
       value: |
         ## 💡 Share Your Idea
 
-        Have an idea for improving Semantic Unit? We'd love to hear it!
+        Have an idea for improving SemanticTest? We'd love to hear it!
 
   - type: textarea
     id: idea
     attributes:
       label: Your Idea
       description: Describe your idea in detail
-      placeholder: "What if Semantic Unit could..."
+      placeholder: "What if SemanticTest could..."
     validations:
       required: true
 

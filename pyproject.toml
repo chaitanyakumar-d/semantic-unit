@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "semantic-unit"
+name = "semantictest"
 version = "0.1.0"
 description = "Deterministic Evaluation Standard for semantic units"
 readme = "README.md"
@@ -51,21 +51,21 @@ dev = [
 ]
 
 [project.scripts]
-semantic-unit = "semantic_unit.cli.main:app"
+semantictest = "semantictest.cli.main:app"
 
 [project.urls]
-Homepage = "https://github.com/chaitanyakumar-d/semantic-unit"
-Documentation = "https://github.com/chaitanyakumar-d/semantic-unit#readme"
-Repository = "https://github.com/chaitanyakumar-d/semantic-unit"
-Issues = "https://github.com/chaitanyakumar-d/semantic-unit/issues"
+Homepage = "https://github.com/chaitanyakumar-d/semantictest"
+Documentation = "https://github.com/chaitanyakumar-d/semantictest#readme"
+Repository = "https://github.com/chaitanyakumar-d/semantictest"
+Issues = "https://github.com/chaitanyakumar-d/semantictest/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["semantic_unit*"]
+include = ["semantictest*"]
 exclude = ["tests*"]
 
 [tool.setuptools.package-data]
-semantic_unit = ["py.typed"]
+semantictest = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -74,7 +74,7 @@ python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = [
     "--verbose",
-    "--cov=semantic_unit",
+    "--cov=semantictest",
     "--cov-report=term-missing",
     "--cov-report=html",
     "--cov-report=xml",

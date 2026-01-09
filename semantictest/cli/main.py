@@ -1,5 +1,5 @@
 """
-Main CLI entry point for Semantic Unit.
+Main CLI entry point for SemanticTest.
 
 This module defines the primary CLI application using Typer.
 """
@@ -13,11 +13,11 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-from semantic_unit import SemanticJudge
+from semantictest import SemanticJudge
 
 app = typer.Typer(
-    name="semantic-unit",
-    help="Semantic Unit: Deterministic Evaluation Standard",
+    name="semantictest",
+    help="SemanticTest: Deterministic Evaluation Standard",
     add_completion=False,
 )
 console = Console()
@@ -26,9 +26,9 @@ console = Console()
 def version_callback(value: bool) -> None:
     """Display version information."""
     if value:
-        from semantic_unit import __version__
+        from semantictest import __version__
 
-        console.print(f"Semantic Unit version: {__version__}")
+        console.print(f"SemanticTest version: {__version__}")
         raise typer.Exit()
 
 
@@ -44,7 +44,7 @@ def main(
     ),
 ) -> None:
     """
-    Semantic Unit: Deterministic Evaluation Standard
+    SemanticTest: Deterministic Evaluation Standard
 
     A modern framework for evaluating semantic units with deterministic,
     reproducible results.
@@ -72,8 +72,8 @@ def evaluate(
     and detect distributional drift between observed and reference outputs.
 
     Examples:
-        semantic-unit evaluate "The test passed" "Test was successful"
-        semantic-unit evaluate "Output A" "Expected A" --model gpt-4 --json
+        semantictest evaluate "The test passed" "Test was successful"
+        semantictest evaluate "Output A" "Expected A" --model gpt-4 --json
     """
     try:
         # Initialize semantic judge
@@ -152,7 +152,7 @@ def batch(
     ]
 
     Example:
-        semantic-unit batch evaluations.json --output results.json
+        semantictest batch evaluations.json --output results.json
     """
     try:
         # Load input file

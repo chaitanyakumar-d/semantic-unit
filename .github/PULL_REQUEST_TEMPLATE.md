@@ -39,9 +39,9 @@ Fixes #
 
 ```bash
 pytest
-black --check semantic_unit/ tests/
-ruff check semantic_unit/ tests/
-mypy semantic_unit/
+black --check semantictest/ tests/
+ruff check semantictest/ tests/
+mypy semantictest/
 ```
 
 ## Screenshots (if applicable)
