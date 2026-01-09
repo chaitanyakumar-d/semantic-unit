@@ -1,0 +1,32 @@
+title: "[Idea]: "
+labels:
+  - idea
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Share Your Idea
+
+        Have an idea for improving Semantic Unit? We'd love to hear it!
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea in detail
+      placeholder: "What if Semantic Unit could..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this benefit users?
+      placeholder: "This would help when..."
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Possible Implementation
+      description: Any thoughts on how this could be implemented?

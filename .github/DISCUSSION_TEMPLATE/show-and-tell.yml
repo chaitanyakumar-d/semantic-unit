@@ -1,0 +1,39 @@
+title: "[Show & Tell]: "
+labels:
+  - showcase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Show Off What You've Built!
+
+        Built something cool with Semantic Unit? Share it with the community!
+
+  - type: textarea
+    id: project
+    attributes:
+      label: Project Description
+      description: Tell us about what you built
+      placeholder: "I built..."
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Project Link
+      description: Link to your project (GitHub, demo, etc.)
+      placeholder: "https://..."
+
+  - type: textarea
+    id: how
+    attributes:
+      label: How You Used Semantic Unit
+      description: Describe how Semantic Unit helped your project
+      placeholder: "I used Semantic Unit to..."
+
+  - type: textarea
+    id: lessons
+    attributes:
+      label: Lessons Learned
+      description: Any tips or insights for others?

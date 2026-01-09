@@ -1,0 +1,65 @@
+name: ❓ Question / Help
+description: Ask a question or get help with Semantic Unit
+title: "[Question]: "
+labels: ["question", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help! Please provide as much detail as possible.
+
+        💡 **Tip**: Check the [README](https://github.com/chaitanyakumar-d/semantic-unit#readme) first for common usage patterns.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: "How do I..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      options:
+        - Installation / Setup
+        - Usage / API
+        - Configuration
+        - Integration (pytest, CI/CD)
+        - Performance
+        - Best Practices
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Describe what you've already attempted.
+      placeholder: "I tried looking at the docs and..."
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Code Context (if applicable)
+      description: Share any relevant code you're working with.
+      render: python
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help us answer your question.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have read the README and documentation
+          required: true
+        - label: I have searched existing issues for similar questions
+          required: true
