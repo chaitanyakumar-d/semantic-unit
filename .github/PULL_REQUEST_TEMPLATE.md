@@ -39,9 +39,9 @@ Fixes #
 
 ```bash
 pytest
-black --check semantictest/ tests/
-ruff check semantictest/ tests/
-mypy semantictest/
+black --check judgeai/ tests/
+ruff check judgeai/ tests/
+mypy judgeai/
 ```
 
 ## Screenshots (if applicable)

@@ -1,6 +1,6 @@
 # RAG Validation Examples
 
-Validate Retrieval-Augmented Generation (RAG) pipelines with SemanticTest.
+Validate Retrieval-Augmented Generation (RAG) pipelines with JudgeAI.
 
 ## Overview
 
@@ -10,14 +10,14 @@ RAG systems combine retrieval and generation, which can introduce multiple failu
 2. **Generation failures**: LLM misinterprets or hallucinates
 3. **Integration failures**: Good retrieval but poor synthesis
 
-SemanticTest helps catch all three.
+JudgeAI helps catch all three.
 
 ## Basic RAG Testing
 
 ### Simple RAG Validator
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from your_rag import RAGPipeline
 
 judge = SemanticJudge(temperature=0.0)
@@ -52,7 +52,7 @@ for case in test_cases:
 ### RAG Test Suite
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from dataclasses import dataclass
 from typing import Optional
 import json
@@ -154,7 +154,7 @@ print(f"Pass rate: {report['pass_rate']:.1%}")
 ### Retrieval Quality Testing
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 class RetrievalTester:
     """Test retrieval quality independently."""
@@ -251,7 +251,7 @@ result = gen_tester.test_generation(
 ### Grounded Response Testing
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 class HallucinationDetector:
     """Detect when RAG hallucinates beyond retrieved context."""
@@ -329,7 +329,7 @@ if grounding["potential_hallucination"]:
 ```python
 # tests/conftest.py
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from your_rag import RAGPipeline
 
 @pytest.fixture(scope="session")
@@ -404,7 +404,7 @@ class TestRAGGrounding:
 ## Monitoring RAG in Production
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from datetime import datetime
 
 class RAGMonitor:

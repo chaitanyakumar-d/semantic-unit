@@ -1,6 +1,6 @@
 # Core Concepts
 
-Understanding the fundamental concepts behind SemanticTest.
+Understanding the fundamental concepts behind JudgeAI.
 
 ## The Problem with Traditional Testing
 
@@ -23,10 +23,10 @@ assert response == "The answer is 4"
 
 ## Semantic Evaluation
 
-SemanticTest solves this by evaluating **meaning**, not **syntax**:
+JudgeAI solves this by evaluating **meaning**, not **syntax**:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -106,7 +106,7 @@ assert result.score > 0.7
 "Returns are handled on a case-by-case basis"  # Score: 0.4 ❌
 ```
 
-SemanticTest helps you catch this drift before it reaches users.
+JudgeAI helps you catch this drift before it reaches users.
 
 ## Deterministic Evaluation
 

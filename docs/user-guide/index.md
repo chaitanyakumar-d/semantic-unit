@@ -1,10 +1,10 @@
 # User Guide
 
-Welcome to the SemanticTest User Guide. This section covers everything you need to know to use SemanticTest effectively.
+Welcome to the JudgeAI User Guide. This section covers everything you need to know to use JudgeAI effectively.
 
 ## Overview
 
-SemanticTest provides a **semantic evaluation framework** for testing AI outputs. Instead of comparing strings character-by-character, it evaluates whether two texts convey the same **meaning**.
+JudgeAI provides a **semantic evaluation framework** for testing AI outputs. Instead of comparing strings character-by-character, it evaluates whether two texts convey the same **meaning**.
 
 ## Sections
 
@@ -20,7 +20,7 @@ SemanticTest provides a **semantic evaluation framework** for testing AI outputs
 
 - [:material-console: **CLI Reference**](cli.md)
 
-    Use SemanticTest from the command line.
+    Use JudgeAI from the command line.
 
 - [:material-test-tube: **Testing Integration**](testing.md)
 
@@ -55,7 +55,7 @@ assert result.score > 0.8  # Passes if meaning matches
 The `SemanticJudge` is the core class that performs semantic evaluations:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge(model="gpt-4o-mini")
 result = judge.evaluate(actual="...", expected="...")
@@ -72,8 +72,8 @@ result = judge.evaluate(actual="...", expected="...")
 | Basic evaluation | `judge.evaluate(actual, expected)` |
 | Batch evaluation | `judge.batch_evaluate(test_cases)` |
 | Change model | `SemanticJudge(model="claude-3-5-sonnet-20241022")` |
-| CLI evaluation | `semantictest evaluate "text" "expected"` |
+| CLI evaluation | `judgeai evaluate "text" "expected"` |
 
 ## Next Steps
 
-Start with [Core Concepts](concepts.md) to understand how SemanticTest works, or jump to [LLM Providers](providers.md) to configure your preferred AI provider.
+Start with [Core Concepts](concepts.md) to understand how JudgeAI works, or jump to [LLM Providers](providers.md) to configure your preferred AI provider.

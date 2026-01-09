@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "semantictest"
+name = "judgeai"
 version = "0.1.0"
-description = "Deterministic Evaluation Standard for semantic units"
+description = "LLM-as-a-Judge framework for semantic evaluation of AI outputs"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "Apache-2.0"}
@@ -15,7 +15,7 @@ authors = [
 maintainers = [
     {name = "Chaitanya Kumar Dasari", email = "chaitanyakumar435@outlook.com"}
 ]
-keywords = ["evaluation", "semantic", "testing", "quality-assurance"]
+keywords = ["llm", "evaluation", "semantic", "testing", "ai", "judge", "quality-assurance"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -51,21 +51,21 @@ dev = [
 ]
 
 [project.scripts]
-semantictest = "semantictest.cli.main:app"
+judgeai = "judgeai.cli.main:app"
 
 [project.urls]
-Homepage = "https://github.com/chaitanyakumar-d/semantictest"
-Documentation = "https://github.com/chaitanyakumar-d/semantictest#readme"
-Repository = "https://github.com/chaitanyakumar-d/semantictest"
-Issues = "https://github.com/chaitanyakumar-d/semantictest/issues"
+Homepage = "https://github.com/chaitanyakumar-d/judgeai"
+Documentation = "https://github.com/chaitanyakumar-d/judgeai#readme"
+Repository = "https://github.com/chaitanyakumar-d/judgeai"
+Issues = "https://github.com/chaitanyakumar-d/judgeai/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["semantictest*"]
+include = ["judgeai*"]
 exclude = ["tests*"]
 
 [tool.setuptools.package-data]
-semantictest = ["py.typed"]
+judgeai = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -74,7 +74,7 @@ python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = [
     "--verbose",
-    "--cov=semantictest",
+    "--cov=judgeai",
     "--cov-report=term-missing",
     "--cov-report=html",
     "--cov-report=xml",

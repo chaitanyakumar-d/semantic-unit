@@ -1,6 +1,6 @@
 # SemanticJudge
 
-::: semantictest.core.engine.SemanticJudge
+::: judgeai.core.engine.SemanticJudge
     options:
       show_root_heading: true
       show_source: true
@@ -15,7 +15,7 @@
 ## Basic Usage
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Initialize with defaults
 judge = SemanticJudge()
@@ -225,7 +225,7 @@ anthropic:
 ## Error Handling
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from litellm import APIError, RateLimitError
 
 judge = SemanticJudge()

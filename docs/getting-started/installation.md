@@ -1,6 +1,6 @@
 # Installation
 
-This guide covers all the ways to install SemanticTest.
+This guide covers all the ways to install JudgeAI.
 
 ## Requirements
 
@@ -9,10 +9,10 @@ This guide covers all the ways to install SemanticTest.
 
 ## Quick Install
 
-The easiest way to install SemanticTest is via pip:
+The easiest way to install JudgeAI is via pip:
 
 ```bash
-pip install semantictest
+pip install judgeai
 ```
 
 ## Installation Options
@@ -20,14 +20,14 @@ pip install semantictest
 === "pip (Recommended)"
 
     ```bash
-    pip install semantictest
+    pip install judgeai
     ```
 
 === "From Source"
 
     ```bash
-    git clone https://github.com/chaitanyakumar-d/semantictest.git
-    cd semantictest
+    git clone https://github.com/chaitanyakumar-d/judgeai.git
+    cd judgeai
     pip install -e .
     ```
 
@@ -36,15 +36,15 @@ pip install semantictest
     For contributors and developers:
 
     ```bash
-    git clone https://github.com/chaitanyakumar-d/semantictest.git
-    cd semantictest
+    git clone https://github.com/chaitanyakumar-d/judgeai.git
+    cd judgeai
     pip install -e ".[dev]"
     ```
 
 === "Poetry"
 
     ```bash
-    poetry add semantictest
+    poetry add judgeai
     ```
 
 === "Conda"
@@ -52,7 +52,7 @@ pip install semantictest
     ```bash
     # First install pip in your conda environment
     conda install pip
-    pip install semantictest
+    pip install judgeai
     ```
 
 ## Verify Installation
@@ -60,21 +60,21 @@ pip install semantictest
 After installation, verify everything works:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
-print("SemanticTest installed successfully!")
+print("JudgeAI installed successfully!")
 print(f"Available providers: {SemanticJudge.list_supported_models()}")
 ```
 
 Or use the CLI:
 
 ```bash
-semantictest --version
+judgeai --version
 ```
 
 ## Dependencies
 
-SemanticTest automatically installs these dependencies:
+JudgeAI automatically installs these dependencies:
 
 | Package | Purpose |
 |---------|---------|
@@ -101,7 +101,7 @@ For development, additional packages are installed:
 
 ### Common Issues
 
-??? question "ImportError: No module named 'semantictest'"
+??? question "ImportError: No module named 'judgeai'"
 
     Make sure you installed the package in your active Python environment:
 
@@ -110,7 +110,7 @@ For development, additional packages are installed:
     which python
 
     # Install in the correct environment
-    pip install semantictest
+    pip install judgeai
     ```
 
 ??? question "Permission denied during installation"
@@ -119,12 +119,12 @@ For development, additional packages are installed:
 
     ```bash
     # Option 1: User install
-    pip install --user semantictest
+    pip install --user judgeai
 
     # Option 2: Virtual environment (recommended)
     python -m venv venv
     source venv/bin/activate  # Linux/macOS
-    pip install semantictest
+    pip install judgeai
     ```
 
 ??? question "Outdated pip"
@@ -133,7 +133,7 @@ For development, additional packages are installed:
 
     ```bash
     pip install --upgrade pip
-    pip install semantictest
+    pip install judgeai
     ```
 
 ## Virtual Environment Setup
@@ -153,20 +153,20 @@ We recommend using a virtual environment:
     venv\Scripts\activate
 
     # Install
-    pip install semantictest
+    pip install judgeai
     ```
 
 === "conda"
 
     ```bash
     # Create environment
-    conda create -n semantictest python=3.11
+    conda create -n judgeai python=3.11
 
     # Activate
-    conda activate semantictest
+    conda activate judgeai
 
     # Install
-    pip install semantictest
+    pip install judgeai
     ```
 
 === "poetry"
@@ -176,7 +176,7 @@ We recommend using a virtual environment:
     poetry init
 
     # Add dependency
-    poetry add semantictest
+    poetry add judgeai
 
     # Enter shell
     poetry shell

@@ -1,6 +1,6 @@
 # Testing Integration
 
-Learn how to integrate SemanticTest with your testing framework.
+Learn how to integrate JudgeAI with your testing framework.
 
 ## pytest Integration
 
@@ -9,7 +9,7 @@ Learn how to integrate SemanticTest with your testing framework.
 ```python
 # conftest.py
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 @pytest.fixture(scope="session")
 def judge():
@@ -39,7 +39,7 @@ def test_ai_response(judge):
 ```python
 # conftest.py
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 @pytest.fixture(scope="session")
 def judge():
@@ -119,9 +119,9 @@ pytest -m semantic
 
 ```python
 import unittest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
-class SemanticTestCase(unittest.TestCase):
+class JudgeAICase(unittest.TestCase):
     """Base class for semantic tests."""
 
     @classmethod
@@ -137,7 +137,7 @@ class SemanticTestCase(unittest.TestCase):
                        f"Reasoning: {result.reasoning}"
             )
 
-class TestAIChatbot(SemanticTestCase):
+class TestAIChatbot(JudgeAICase):
 
     def test_greeting(self):
         response = chatbot.greet("John")
@@ -351,7 +351,7 @@ pytest
 pytest tests/semantic/
 
 # With coverage
-pytest --cov=semantictest tests/
+pytest --cov=judgeai tests/
 
 # Verbose output
 pytest -v tests/semantic/

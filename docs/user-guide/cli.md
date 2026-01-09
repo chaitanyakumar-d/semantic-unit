@@ -1,14 +1,14 @@
 # CLI Reference
 
-SemanticTest provides a command-line interface for quick evaluations and batch processing.
+JudgeAI provides a command-line interface for quick evaluations and batch processing.
 
 ## Installation
 
 The CLI is installed automatically with the package:
 
 ```bash
-pip install semantictest
-semantictest --help
+pip install judgeai
+judgeai --help
 ```
 
 ## Commands
@@ -18,7 +18,7 @@ semantictest --help
 Evaluate semantic similarity between two texts.
 
 ```bash
-semantictest evaluate "actual text" "expected text"
+judgeai evaluate "actual text" "expected text"
 ```
 
 #### Options
@@ -34,19 +34,19 @@ semantictest evaluate "actual text" "expected text"
 
 ```bash
 # Basic evaluation
-semantictest evaluate "The sky is blue" "The sky has a blue color"
+judgeai evaluate "The sky is blue" "The sky has a blue color"
 
 # With specific model
-semantictest evaluate "text" "expected" --model gpt-4o
+judgeai evaluate "text" "expected" --model gpt-4o
 
 # With threshold
-semantictest evaluate "text" "expected" --threshold 0.9
+judgeai evaluate "text" "expected" --threshold 0.9
 
 # JSON output
-semantictest evaluate "text" "expected" --json
+judgeai evaluate "text" "expected" --json
 
 # Verbose output
-semantictest evaluate "text" "expected" --verbose
+judgeai evaluate "text" "expected" --verbose
 ```
 
 #### Output
@@ -68,7 +68,7 @@ semantictest evaluate "text" "expected" --verbose
 Evaluate multiple test cases from a JSON file.
 
 ```bash
-semantictest batch test_cases.json
+judgeai batch test_cases.json
 ```
 
 #### Input Format
@@ -105,16 +105,16 @@ Create a JSON file with test cases:
 
 ```bash
 # Basic batch processing
-semantictest batch test_cases.json
+judgeai batch test_cases.json
 
 # Save results to file
-semantictest batch test_cases.json --output results.json
+judgeai batch test_cases.json --output results.json
 
 # With specific model
-semantictest batch test_cases.json --model gpt-4o
+judgeai batch test_cases.json --model gpt-4o
 
 # JSON output format
-semantictest batch test_cases.json --format json
+judgeai batch test_cases.json --format json
 ```
 
 #### Output
@@ -140,7 +140,7 @@ semantictest batch test_cases.json --format json
 Display version information.
 
 ```bash
-semantictest --version
+judgeai --version
 ```
 
 ---
@@ -150,9 +150,9 @@ semantictest --version
 Get help on any command.
 
 ```bash
-semantictest --help
-semantictest evaluate --help
-semantictest batch --help
+judgeai --help
+judgeai evaluate --help
+judgeai batch --help
 ```
 
 ---
@@ -191,7 +191,7 @@ The CLI respects these environment variables:
 # ci-test.sh
 
 # Run batch tests
-semantictest batch tests/semantic_tests.json \
+judgeai batch tests/semantic_tests.json \
   --threshold 0.85 \
   --output results.json \
   --format json
@@ -215,7 +215,7 @@ ACTUAL="$1"
 EXPECTED="$2"
 THRESHOLD="${3:-0.8}"
 
-result=$(semantictest evaluate "$ACTUAL" "$EXPECTED" \
+result=$(judgeai evaluate "$ACTUAL" "$EXPECTED" \
   --threshold "$THRESHOLD" \
   --json)
 
@@ -229,7 +229,7 @@ echo "Semantic similarity score: $score"
 # Run with different models
 for model in "gpt-4o-mini" "gpt-4o" "claude-3-5-sonnet-20241022"; do
   echo "Testing with $model..."
-  semantictest batch tests.json --model "$model" --output "results_${model}.json"
+  judgeai batch tests.json --model "$model" --output "results_${model}.json"
 done
 ```
 
@@ -245,7 +245,7 @@ done
 
 !!! tip "Pipe from other commands"
     ```bash
-    echo '{"actual": "text", "expected": "text"}' | semantictest evaluate --stdin
+    echo '{"actual": "text", "expected": "text"}' | judgeai evaluate --stdin
     ```
 
 ## Next Steps

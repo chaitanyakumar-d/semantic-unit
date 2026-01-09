@@ -1,13 +1,13 @@
 # Basic Usage Examples
 
-Simple examples to get started with SemanticTest.
+Simple examples to get started with JudgeAI.
 
 ## Simple Evaluation
 
 The most basic use case - comparing two texts:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Create a judge
 judge = SemanticJudge()
@@ -27,7 +27,7 @@ print(f"Reasoning: {result.reasoning}")
 Test that your AI gives correct answers:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -51,7 +51,7 @@ else:
 Catch when AI makes up information:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -80,7 +80,7 @@ for response in ai_responses:
 Choose the right model for your needs:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Fast and cheap (good for development)
 judge_fast = SemanticJudge(model="gpt-4o-mini")
@@ -100,7 +100,7 @@ result = judge_fast.evaluate("text", "expected")
 Evaluate multiple test cases efficiently:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -134,7 +134,7 @@ for i, result in enumerate(results):
 Choose appropriate thresholds for your use case:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -161,7 +161,7 @@ else:
 Extract information from `DriftResult`:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate(
@@ -189,7 +189,7 @@ print(result_json)
 Verify that model fine-tuning maintains quality:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -234,16 +234,16 @@ Use from the command line:
 
 ```bash
 # Quick check
-semantictest evaluate "AI said this" "Should say this"
+judgeai evaluate "AI said this" "Should say this"
 
 # With specific model
-semantictest evaluate "text" "expected" --model gpt-4o
+judgeai evaluate "text" "expected" --model gpt-4o
 
 # Get JSON output
-semantictest evaluate "text" "expected" --json
+judgeai evaluate "text" "expected" --json
 
 # Batch processing
-semantictest batch test_cases.json --output results.json
+judgeai batch test_cases.json --output results.json
 ```
 
 ## Error Handling
@@ -251,7 +251,7 @@ semantictest batch test_cases.json --output results.json
 Handle potential errors gracefully:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from litellm import APIError, RateLimitError
 
 judge = SemanticJudge()

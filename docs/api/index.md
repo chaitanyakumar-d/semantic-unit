@@ -1,10 +1,10 @@
 # API Reference
 
-Complete API documentation for SemanticTest.
+Complete API documentation for JudgeAI.
 
 ## Overview
 
-SemanticTest provides a simple, focused API:
+JudgeAI provides a simple, focused API:
 
 | Class/Module | Purpose |
 |-------------|---------|
@@ -17,7 +17,7 @@ SemanticTest provides a simple, focused API:
 ### SemanticJudge
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Initialize
 judge = SemanticJudge(
@@ -56,13 +56,13 @@ result.expected   # str: Input expected text
 
 ```bash
 # Evaluate
-semantictest evaluate "actual" "expected"
+judgeai evaluate "actual" "expected"
 
 # Batch
-semantictest batch tests.json --output results.json
+judgeai batch tests.json --output results.json
 
 # Help
-semantictest --help
+judgeai --help
 ```
 
 ## Detailed Documentation
@@ -87,22 +87,22 @@ semantictest --help
 
 ```python
 # Recommended: Import main class
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Import models
-from semantictest.core.models import DriftResult
+from judgeai.core.models import DriftResult
 
 # Import everything (not recommended)
-from semantictest import *
+from judgeai import *
 ```
 
 ## Type Hints
 
-SemanticTest is fully typed. Use with mypy:
+JudgeAI is fully typed. Use with mypy:
 
 ```python
-from semantictest import SemanticJudge
-from semantictest.core.models import DriftResult
+from judgeai import SemanticJudge
+from judgeai.core.models import DriftResult
 
 def test_response(judge: SemanticJudge) -> None:
     result: DriftResult = judge.evaluate("actual", "expected")

@@ -1,8 +1,8 @@
-# Contributing to SemanticTest
+# Contributing to JudgeAI
 
 ## Governance Model
 
-SemanticTest is maintained as a research artifact under strict academic standards for code quality, methodological rigor, and semantic integrity. All contributions undergo comprehensive technical and conceptual review to ensure alignment with the framework's foundational principles of deterministic evaluation and reproducible science.
+JudgeAI is maintained as a research artifact under strict academic standards for code quality, methodological rigor, and semantic integrity. All contributions undergo comprehensive technical and conceptual review to ensure alignment with the framework's foundational principles of deterministic evaluation and reproducible science.
 
 ## Maintainer
 
@@ -29,8 +29,8 @@ This project adheres to the highest standards of academic software engineering. 
 1. **Review the Literature**: Familiarize yourself with relevant publications on LLM evaluation, semantic drift detection, and deterministic testing methodologies
 2. **Understand the Architecture**: Study the core evaluation engine and its theoretical foundations
 3. **Run the Test Suite**: Ensure all existing tests pass (`pytest`)
-4. **Validate Type Safety**: Run static type checking (`mypy semantictest`)
-5. **Format Your Code**: Apply standardized formatting (`black semantictest`, `ruff check semantictest`)
+4. **Validate Type Safety**: Run static type checking (`mypy judgeai`)
+5. **Format Your Code**: Apply standardized formatting (`black judgeai`, `ruff check judgeai`)
 
 ### Pull Request Process
 
@@ -184,7 +184,7 @@ Types: `feat`, `fix`, `docs`, `test`, `refactor`, `perf`, `chore`
 
 ### Academic Use
 
-Researchers using SemanticTest in publications should:
+Researchers using JudgeAI in publications should:
 
 1. Cite using the provided `CITATION.cff` file
 2. Report version numbers for reproducibility
@@ -247,8 +247,8 @@ Substantial intellectual contributions may warrant co-authorship on research pap
 
 ### Technical Questions
 
-- **GitHub Discussions**: https://github.com/chaitanyakumar-d/semantictest/discussions
-- **GitHub Issues**: https://github.com/chaitanyakumar-d/semantictest/issues
+- **GitHub Discussions**: https://github.com/chaitanyakumar-d/judgeai/discussions
+- **GitHub Issues**: https://github.com/chaitanyakumar-d/judgeai/issues
 - **Email**: Direct maintainer contact for sensitive issues
 
 ### Research Inquiries
@@ -261,7 +261,7 @@ For research collaborations, benchmark requests, or methodological questions, co
 
 ## License
 
-By contributing to SemanticTest, you agree that your contributions will be licensed under the Apache License 2.0. You represent that you have the legal right to make your contributions.
+By contributing to JudgeAI, you agree that your contributions will be licensed under the Apache License 2.0. You represent that you have the legal right to make your contributions.
 
 ## Acknowledgments
 

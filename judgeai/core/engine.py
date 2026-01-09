@@ -13,7 +13,7 @@ from typing import Any, Optional
 import litellm
 from dotenv import load_dotenv
 
-from semantictest.core.models import DriftResult
+from judgeai.core.models import DriftResult
 
 # Load environment variables
 load_dotenv()
@@ -43,7 +43,7 @@ class SemanticJudge:
         Maximum token budget for model response generation. Defaults to 500.
     api_key : str, optional
         API authentication key for the language model provider. If not provided,
-        will attempt to load from SEMANTICTEST_API_KEY environment variable.
+        will attempt to load from JUDGEAI_API_KEY environment variable.
 
     Attributes
     ----------
@@ -194,9 +194,9 @@ Return ONLY valid JSON in this exact format:
                 os.environ["GROQ_API_KEY"] = api_key
             else:
                 os.environ["OPENAI_API_KEY"] = api_key
-        elif os.getenv("SEMANTICTEST_API_KEY"):
-            # Fallback to generic semantic unit key
-            semantic_key = os.getenv("SEMANTICTEST_API_KEY")
+        elif os.getenv("JUDGEAI_API_KEY"):
+            # Fallback to generic JudgeAI key
+            semantic_key = os.getenv("JUDGEAI_API_KEY")
             if semantic_key:
                 os.environ["OPENAI_API_KEY"] = semantic_key
 

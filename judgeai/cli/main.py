@@ -1,5 +1,5 @@
 """
-Main CLI entry point for SemanticTest.
+Main CLI entry point for JudgeAI.
 
 This module defines the primary CLI application using Typer.
 """
@@ -13,11 +13,11 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 app = typer.Typer(
-    name="semantictest",
-    help="SemanticTest: Deterministic Evaluation Standard",
+    name="judgeai",
+    help="JudgeAI: LLM-as-a-Judge Framework",
     add_completion=False,
 )
 console = Console()
@@ -26,9 +26,9 @@ console = Console()
 def version_callback(value: bool) -> None:
     """Display version information."""
     if value:
-        from semantictest import __version__
+        from judgeai import __version__
 
-        console.print(f"SemanticTest version: {__version__}")
+        console.print(f"JudgeAI version: {__version__}")
         raise typer.Exit()
 
 
@@ -44,10 +44,10 @@ def main(
     ),
 ) -> None:
     """
-    SemanticTest: Deterministic Evaluation Standard
+    JudgeAI: LLM-as-a-Judge Framework
 
-    A modern framework for evaluating semantic units with deterministic,
-    reproducible results.
+    A modern framework for semantic evaluation of AI outputs with
+    deterministic, reproducible results.
     """
     pass
 
@@ -72,8 +72,8 @@ def evaluate(
     and detect distributional drift between observed and reference outputs.
 
     Examples:
-        semantictest evaluate "The test passed" "Test was successful"
-        semantictest evaluate "Output A" "Expected A" --model gpt-4 --json
+        judgeai evaluate "The test passed" "Test was successful"
+        judgeai evaluate "Output A" "Expected A" --model gpt-4 --json
     """
     try:
         # Initialize semantic judge
@@ -152,7 +152,7 @@ def batch(
     ]
 
     Example:
-        semantictest batch evaluations.json --output results.json
+        judgeai batch evaluations.json --output results.json
     """
     try:
         # Load input file

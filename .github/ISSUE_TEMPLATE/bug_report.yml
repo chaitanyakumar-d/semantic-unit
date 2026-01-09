@@ -54,7 +54,7 @@ body:
       description: If applicable, add a minimal code sample to reproduce the issue.
       render: python
       placeholder: |
-        from semantictest import SemanticJudge
+        from judgeai import SemanticJudge
 
         judge = SemanticJudge()
         result = judge.evaluate("actual", "expected")
@@ -62,8 +62,8 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: SemanticTest Version
-      description: What version of semantictest are you using?
+      label: JudgeAI Version
+      description: What version of judgeai are you using?
       options:
         - 0.1.0 (latest)
         - Development (main branch)

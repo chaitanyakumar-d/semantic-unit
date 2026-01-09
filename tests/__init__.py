@@ -1,5 +1,5 @@
 """
-Test suite for SemanticTest.
+Test suite for JudgeAI.
 
-This package contains all tests for the semantictest package.
+This package contains all tests for the judgeai package.
 """

@@ -1,6 +1,6 @@
 # LLM Providers
 
-SemanticTest supports **100+ LLMs** through [LiteLLM](https://github.com/BerriAI/litellm). This guide covers all supported providers and how to configure them.
+JudgeAI supports **100+ LLMs** through [LiteLLM](https://github.com/BerriAI/litellm). This guide covers all supported providers and how to configure them.
 
 ## Supported Providers
 
@@ -29,7 +29,7 @@ export OPENAI_API_KEY="sk-..."
 ### Usage
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Default model
 judge = SemanticJudge()
@@ -302,7 +302,7 @@ judge = SemanticJudge(model="openrouter/anthropic/claude-3-sonnet")
 ## Listing All Providers
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 providers = SemanticJudge.list_supported_models()
 for name, info in providers.items():

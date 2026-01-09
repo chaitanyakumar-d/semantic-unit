@@ -1,16 +1,16 @@
 # Getting Started
 
-Welcome to SemanticTest! This section will help you get up and running quickly.
+Welcome to JudgeAI! This section will help you get up and running quickly.
 
-## What is SemanticTest?
+## What is JudgeAI?
 
-SemanticTest is a modern testing framework that brings **unit testing to AI agents**. Instead of testing for exact string matches (which fail on AI outputs), it tests for **semantic meaning**.
+JudgeAI is a modern testing framework that brings **unit testing to AI agents**. Instead of testing for exact string matches (which fail on AI outputs), it tests for **semantic meaning**.
 
 ```python
 # Traditional testing (breaks with AI)
 assert ai_response == "The test passed"  # ❌ Fails on paraphrasing
 
-# SemanticTest testing
+# JudgeAI testing
 result = judge.evaluate(ai_response, "The test passed")
 assert result.score > 0.8  # ✅ Tests meaning, not words
 ```
@@ -21,7 +21,7 @@ assert result.score > 0.8  # ✅ Tests meaning, not words
 
 - [:material-download: **Installation**](installation.md)
 
-    Install SemanticTest via pip or from source.
+    Install JudgeAI via pip or from source.
 
 - [:material-rocket-launch: **Quick Start**](quickstart.md)
 
@@ -44,7 +44,7 @@ Before you begin, make sure you have:
 ## Installation Preview
 
 ```bash
-pip install semantictest
+pip install judgeai
 ```
 
 Then set your API key:
@@ -56,7 +56,7 @@ export OPENAI_API_KEY="your-key-here"
 And you're ready to go!
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate("AI output", "Expected meaning")

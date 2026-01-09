@@ -1,6 +1,6 @@
 # Pytest Integration Examples
 
-Complete examples for integrating SemanticTest with pytest.
+Complete examples for integrating JudgeAI with pytest.
 
 ## Basic Setup
 
@@ -9,7 +9,7 @@ Complete examples for integrating SemanticTest with pytest.
 ```python
 # tests/conftest.py
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 @pytest.fixture(scope="session")
 def judge():
@@ -193,7 +193,7 @@ import pytest
 @pytest.fixture(params=["gpt-4o-mini", "gpt-4o"])
 def judge_multi(request):
     """Test with multiple models."""
-    from semantictest import SemanticJudge
+    from judgeai import SemanticJudge
     return SemanticJudge(model=request.param, temperature=0.0)
 
 def test_across_models(judge_multi):

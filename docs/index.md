@@ -1,5 +1,5 @@
 ---
-title: SemanticTest - Unit Testing for AI Agents
+title: JudgeAI - LLM-as-a-Judge Framework
 description: Stop your AI from hallucinating in production with one line of code
 hide:
   - navigation
@@ -13,20 +13,20 @@ hide:
 
 <div align="center" markdown>
 
-# SemanticTest
+# JudgeAI
 
-## Unit Testing for AI Agents
+## LLM-as-a-Judge Framework
 
 **Stop your AI from hallucinating in production with one line of code.**
 
-[![Tests](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml)
+[![Tests](https://github.com/chaitanyakumar-d/judgeai/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/judgeai/actions/workflows/tests.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/chaitanyakumar-d/semantictest/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/chaitanyakumar-d/judgeai/blob/main/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chaitanyakumar-d/semantictest/blob/main/CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chaitanyakumar-d/judgeai/blob/main/CONTRIBUTING.md)
 
 [Get Started](getting-started/quickstart.md){ .md-button .md-button--primary }
-[View on GitHub](https://github.com/chaitanyakumar-d/semantictest){ .md-button }
+[View on GitHub](https://github.com/chaitanyakumar-d/judgeai){ .md-button }
 
 </div>
 
@@ -47,7 +47,7 @@ AI outputs are **never** identical, even when correct. Your tests shouldn't brea
 ## The Solution
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate(
@@ -109,14 +109,14 @@ assert result.score > 0.8  # ✅ Tests meaning, not exact words
 === "pip"
 
     ```bash
-    pip install semantictest
+    pip install judgeai
     ```
 
 === "From Source"
 
     ```bash
-    git clone https://github.com/chaitanyakumar-d/semantictest.git
-    cd semantictest
+    git clone https://github.com/chaitanyakumar-d/judgeai.git
+    cd judgeai
     pip install -e .
     ```
 
@@ -125,7 +125,7 @@ assert result.score > 0.8  # ✅ Tests meaning, not exact words
 ## :bulb: Quick Example
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Initialize the judge
 judge = SemanticJudge()
@@ -145,7 +145,7 @@ else:
 
 ---
 
-## :busts_in_silhouette: Who Uses SemanticTest?
+## :busts_in_silhouette: Who Uses JudgeAI?
 
 | Role | Use Case |
 |------|----------|
@@ -159,7 +159,7 @@ else:
 
 ## :link: Supported Providers
 
-SemanticTest supports **100+ LLMs** through [LiteLLM](https://github.com/BerriAI/litellm):
+JudgeAI supports **100+ LLMs** through [LiteLLM](https://github.com/BerriAI/litellm):
 
 | Provider | Example Models |
 |----------|----------------|
@@ -206,8 +206,8 @@ We welcome contributions! See our [Contributing Guide](contributing/index.md) fo
 
 ```bash
 # Clone and setup
-git clone https://github.com/chaitanyakumar-d/semantictest.git
-cd semantictest
+git clone https://github.com/chaitanyakumar-d/judgeai.git
+cd judgeai
 pip install -e ".[dev]"
 
 # Run tests
@@ -218,4 +218,4 @@ pytest
 
 ## :page_facing_up: License
 
-SemanticTest is licensed under the [Apache License 2.0](https://github.com/chaitanyakumar-d/semantictest/blob/main/LICENSE).
+JudgeAI is licensed under the [Apache License 2.0](https://github.com/chaitanyakumar-d/judgeai/blob/main/LICENSE).

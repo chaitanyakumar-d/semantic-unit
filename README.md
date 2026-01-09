@@ -1,12 +1,12 @@
-# SemanticTest: Unit Testing for AI Agents
+# JudgeAI: LLM-as-a-Judge Framework
 
-[![Tests](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/semantictest/actions/workflows/tests.yml)
+[![Tests](https://github.com/chaitanyakumar-d/judgeai/actions/workflows/tests.yml/badge.svg)](https://github.com/chaitanyakumar-d/judgeai/actions/workflows/tests.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/chaitanyakumar-d/semantictest?style=social)](https://github.com/chaitanyakumar-d/semantictest)
+[![GitHub stars](https://img.shields.io/github/stars/chaitanyakumar-d/judgeai?style=social)](https://github.com/chaitanyakumar-d/judgeai)
 
 > **Stop your AI from hallucinating in production with one line of code.**
 
@@ -27,7 +27,7 @@ AI outputs are **never** identical, even when correct. Your tests shouldn't brea
 ## The Solution
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate(
@@ -38,7 +38,7 @@ result = judge.evaluate(
 assert result.score > 0.8  # ✅ Tests meaning, not exact words
 ```
 
-## Why SemanticTest?
+## Why JudgeAI?
 
 - 🎯 **Test Meaning, Not Words**: Assert on semantic correctness, not string equality
 - 🛡️ **Prevent Hallucinations**: Catch AI drift before it reaches users
@@ -50,14 +50,14 @@ assert result.score > 0.8  # ✅ Tests meaning, not exact words
 ## Installation
 
 ```bash
-pip install semantictest
+pip install judgeai
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/chaitanyakumar-d/semantictest.git
-cd semantictest
+git clone https://github.com/chaitanyakumar-d/judgeai.git
+cd judgeai
 pip install -e .
 ```
 
@@ -74,7 +74,7 @@ pip install -e ".[dev]"
 **1. Testing AI Responses:**
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -95,7 +95,7 @@ else:
 
 ```python
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 @pytest.fixture
 def judge():
@@ -120,13 +120,13 @@ def test_ai_summarization(judge):
 
 ```bash
 # Quick evaluation
-semantictest evaluate "AI said this" "Should mean this"
+judgeai evaluate "AI said this" "Should mean this"
 
 # Batch testing
-semantictest batch test_cases.json --output results.json
+judgeai batch test_cases.json --output results.json
 
 # With custom model
-semantictest evaluate "text" "expected" --model gpt-4
+judgeai evaluate "text" "expected" --model gpt-4
 ```
 
 ## Real-World Use Cases
@@ -169,7 +169,7 @@ avg_score = sum(r.score for r in results) / len(results)
 assert avg_score > 0.8, "Fine-tuning degraded performance"
 ```
 
-## Who Uses SemanticTest?
+## Who Uses JudgeAI?
 
 - **AI Engineers**: Testing LLM applications and agents
 - **QA Teams**: Automated testing of AI features
@@ -197,7 +197,7 @@ AZURE_API_BASE=https://your-resource.openai.azure.com
 
 ### Supported LLM Providers
 
-SemanticTest supports **100+ LLMs** via LiteLLM:
+JudgeAI supports **100+ LLMs** via LiteLLM:
 
 | Provider | Models | Environment Variable |
 |----------|--------|---------------------|
@@ -213,7 +213,7 @@ SemanticTest supports **100+ LLMs** via LiteLLM:
 ### Usage Examples
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # OpenAI (default)
 judge = SemanticJudge(model="gpt-4o-mini")
@@ -243,8 +243,8 @@ print(SemanticJudge.list_supported_models())
 
 ```bash
 # Clone repository
-git clone https://github.com/chaitanyakumar-d/semantictest.git
-cd semantictest
+git clone https://github.com/chaitanyakumar-d/judgeai.git
+cd judgeai
 
 # Create virtual environment
 python -m venv venv
@@ -264,7 +264,7 @@ pre-commit install
 pytest
 
 # Run with coverage
-pytest --cov=semantictest
+pytest --cov=judgeai
 
 # Run specific test file
 pytest tests/test_core.py
@@ -274,13 +274,13 @@ pytest tests/test_core.py
 
 ```bash
 # Format code
-black semantictest tests
+black judgeai tests
 
 # Lint code
-ruff check semantictest tests
+ruff check judgeai tests
 
 # Type checking
-mypy semantictest
+mypy judgeai
 ```
 
 ## Contributing
@@ -298,7 +298,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 **AI is everywhere, but testing AI is broken.**
 
 - Traditional tests: `assert output == expected` ❌
-- SemanticTest: `assert meaning_matches(output, expected)` ✅
+- JudgeAI: `assert meaning_matches(output, expected)` ✅
 
 **The difference?** Your AI can now:
 - Paraphrase freely without breaking tests
@@ -307,9 +307,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Repository & Links
 
-- **GitHub**: https://github.com/chaitanyakumar-d/semantictest
-- **Issues**: https://github.com/chaitanyakumar-d/semantictest/issues
-- **Discussions**: https://github.com/chaitanyakumar-d/semantictest/discussions
+- **GitHub**: https://github.com/chaitanyakumar-d/judgeai
+- **Issues**: https://github.com/chaitanyakumar-d/judgeai/issues
+- **Discussions**: https://github.com/chaitanyakumar-d/judgeai/discussions
 
 ## Roadmap
 

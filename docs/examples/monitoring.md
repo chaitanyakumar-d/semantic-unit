@@ -1,17 +1,17 @@
 # Production Monitoring Examples
 
-Monitor AI systems in production using SemanticTest.
+Monitor AI systems in production using JudgeAI.
 
 ## Overview
 
-Use SemanticTest to detect when your AI system's responses drift from expected behavior in production. Early detection prevents customer-facing issues.
+Use JudgeAI to detect when your AI system's responses drift from expected behavior in production. Early detection prevents customer-facing issues.
 
 ## Basic Monitoring
 
 ### Simple Response Monitor
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from datetime import datetime
 import logging
 
@@ -80,7 +80,7 @@ for response in ai_responses:
 ### Streaming Monitor with Alerts
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from collections import deque
@@ -185,7 +185,7 @@ def process_ai_response(response: str, expected: str):
 ### Scheduled Quality Check
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from datetime import datetime
 import json
 
@@ -285,7 +285,7 @@ def daily_quality_check():
 ### Compare Model Versions
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 from typing import Callable
 import statistics
 
@@ -368,7 +368,7 @@ print(f"Model B: {report['model_b_avg']:.3f}")
 
 ```python
 from fastapi import FastAPI, Request
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 import asyncio
 
 app = FastAPI()
@@ -402,7 +402,7 @@ async def run_monitor(response: str, expected: str):
 
 ```python
 from prometheus_client import Counter, Gauge, Histogram
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Metrics
 SEMANTIC_SCORE = Histogram(

@@ -1,11 +1,11 @@
 # Quick Start
 
-Get up and running with SemanticTest in 5 minutes.
+Get up and running with JudgeAI in 5 minutes.
 
 ## Prerequisites
 
 - [x] Python 3.9+ installed
-- [x] SemanticTest installed (`pip install semantictest`)
+- [x] JudgeAI installed (`pip install judgeai`)
 - [x] An LLM API key (OpenAI, Anthropic, etc.)
 
 ## Step 1: Set Up Your API Key
@@ -28,7 +28,7 @@ export OPENAI_API_KEY="your-openai-api-key-here"
 Create a file called `test_semantic.py`:
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Initialize the judge
 judge = SemanticJudge()
@@ -70,7 +70,7 @@ Create `test_ai.py`:
 
 ```python
 import pytest
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 @pytest.fixture
 def judge():
@@ -114,17 +114,17 @@ pytest test_ai.py -v
 
 ## Step 4: Use the CLI
 
-SemanticTest includes a powerful CLI:
+JudgeAI includes a powerful CLI:
 
 ```bash
 # Quick evaluation
-semantictest evaluate "AI said this" "Expected to say this"
+judgeai evaluate "AI said this" "Expected to say this"
 
 # With a specific model
-semantictest evaluate "text" "expected" --model gpt-4
+judgeai evaluate "text" "expected" --model gpt-4
 
 # Batch processing
-semantictest batch test_cases.json --output results.json
+judgeai batch test_cases.json --output results.json
 ```
 
 ## Understanding Results

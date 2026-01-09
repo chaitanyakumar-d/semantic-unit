@@ -1,14 +1,14 @@
-# MkDocs Configuration for SemanticTest Documentation
+# MkDocs Configuration for JudgeAI Documentation
 # https://www.mkdocs.org/user-guide/configuration/
 
-site_name: SemanticTest
-site_url: https://chaitanyakumar-d.github.io/semantictest/
-site_description: Unit Testing for AI Agents - Test meaning, not syntax
+site_name: JudgeAI
+site_url: https://chaitanyakumar-d.github.io/judgeai/
+site_description: LLM-as-a-Judge Framework - Test AI outputs semantically
 site_author: Chaitanya Kumar Dasari
 copyright: Copyright &copy; 2024-2026 Chaitanya Kumar Dasari
 
-repo_name: chaitanyakumar-d/semantictest
-repo_url: https://github.com/chaitanyakumar-d/semantictest
+repo_name: chaitanyakumar-d/judgeai
+repo_url: https://github.com/chaitanyakumar-d/judgeai
 edit_uri: edit/main/docs/
 
 theme:
@@ -118,7 +118,7 @@ markdown_extensions:
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: chaitanyakumar-d
-      repo: semantictest
+      repo: judgeai
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
@@ -140,7 +140,7 @@ extra:
       link: https://github.com/chaitanyakumar-d
       name: GitHub
     - icon: fontawesome/brands/python
-      link: https://pypi.org/project/semantictest/
+      link: https://pypi.org/project/judgeai/
       name: PyPI
 
   analytics:

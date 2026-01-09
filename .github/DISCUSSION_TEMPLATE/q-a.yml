@@ -7,7 +7,7 @@ body:
       value: |
         ## ❓ Ask the Community
 
-        Have a question about using SemanticTest? Ask here!
+        Have a question about using JudgeAI? Ask here!
 
   - type: textarea
     id: question

@@ -1,10 +1,10 @@
 # Configuration
 
-Learn how to configure SemanticTest for your needs.
+Learn how to configure JudgeAI for your needs.
 
 ## API Keys
 
-SemanticTest requires an API key for the LLM provider you want to use.
+JudgeAI requires an API key for the LLM provider you want to use.
 
 ### Setting API Keys
 
@@ -40,7 +40,7 @@ SemanticTest requires an API key for the LLM provider you want to use.
     GROQ_API_KEY=gsk_...
     ```
 
-    SemanticTest automatically loads `.env` files using `python-dotenv`.
+    JudgeAI automatically loads `.env` files using `python-dotenv`.
 
 === "Direct Parameter"
 
@@ -68,7 +68,7 @@ SemanticTest requires an API key for the LLM provider you want to use.
 ### Selecting a Model
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # OpenAI (default)
 judge = SemanticJudge(model="gpt-4o-mini")
@@ -131,7 +131,7 @@ judge = SemanticJudge(
 ## Full Configuration Example
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge(
     model="gpt-4o-mini",           # Model to use
@@ -206,7 +206,7 @@ def get_judge():
 ## Listing Available Models
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 # Get all supported providers and models
 providers = SemanticJudge.list_supported_models()
@@ -225,6 +225,6 @@ google: ['gemini/gemini-1.5-pro', 'gemini/gemini-1.5-flash', ...]
 
 ## Next Steps
 
-- [Quick Start](quickstart.md) - Start using SemanticTest
+- [Quick Start](quickstart.md) - Start using JudgeAI
 - [LLM Providers](../user-guide/providers.md) - Deep dive into providers
 - [API Reference](../api/semantic-judge.md) - Complete API docs

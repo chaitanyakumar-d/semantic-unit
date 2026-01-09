@@ -1,5 +1,5 @@
 """
-Command-line interface for SemanticTest.
+Command-line interface for JudgeAI.
 
 This package provides CLI commands built with Typer and Rich for
 an excellent user experience.

@@ -1,10 +1,10 @@
 # Examples
 
-Real-world examples and use cases for SemanticTest.
+Real-world examples and use cases for JudgeAI.
 
 ## Overview
 
-This section contains practical examples showing how to use SemanticTest in various scenarios.
+This section contains practical examples showing how to use JudgeAI in various scenarios.
 
 <div class="grid cards" markdown>
 
@@ -31,7 +31,7 @@ This section contains practical examples showing how to use SemanticTest in vari
 ### Basic Evaluation
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 
@@ -68,8 +68,8 @@ results = judge.batch_evaluate(test_cases)
 ### CLI Usage
 
 ```bash
-semantictest evaluate "AI output" "Expected output"
-semantictest batch tests.json --output results.json
+judgeai evaluate "AI output" "Expected output"
+judgeai batch tests.json --output results.json
 ```
 
 ## Use Cases

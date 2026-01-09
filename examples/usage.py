@@ -1,12 +1,12 @@
 """
-Example usage of SemanticTest framework.
+Example usage of JudgeAI framework.
 
 This script demonstrates how to use SemanticJudge for semantic evaluation.
 """
 
 import os
 
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 
 def example_basic_evaluation():
@@ -104,14 +104,14 @@ def example_batch_evaluation():
 def main():
     """Run all examples."""
     print("\n" + "=" * 60)
-    print("SEMANTIC UNIT - EXAMPLE USAGE")
+    print("JUDGEAI - EXAMPLE USAGE")
     print("=" * 60)
     print()
 
     # Check if API key is set
-    if not os.getenv("OPENAI_API_KEY") and not os.getenv("SEMANTICTEST_API_KEY"):
+    if not os.getenv("OPENAI_API_KEY") and not os.getenv("JUDGEAI_API_KEY"):
         print("⚠️  WARNING: No API key found!")
-        print("Set OPENAI_API_KEY or SEMANTICTEST_API_KEY environment variable")
+        print("Set OPENAI_API_KEY or JUDGEAI_API_KEY environment variable")
         print("or create a .env file with your API key.")
         print("\nExamples will show structure but won't make actual API calls.\n")
         return
@@ -131,7 +131,7 @@ def main():
         print("\nMake sure you have set your API key:")
         print("  export OPENAI_API_KEY='your-key-here'")
         print("  or")
-        print("  export SEMANTICTEST_API_KEY='your-key-here'")
+        print("  export JUDGEAI_API_KEY='your-key-here'")
 
 
 if __name__ == "__main__":

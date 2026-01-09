@@ -1,12 +1,12 @@
 # Models
 
-Data models used in SemanticTest.
+Data models used in JudgeAI.
 
 ## DriftResult
 
 The result of a semantic evaluation.
 
-::: semantictest.core.models.DriftResult
+::: judgeai.core.models.DriftResult
     options:
       show_root_heading: true
       show_source: true
@@ -20,7 +20,7 @@ The result of a semantic evaluation.
 ## Usage
 
 ```python
-from semantictest import SemanticJudge
+from judgeai import SemanticJudge
 
 judge = SemanticJudge()
 result = judge.evaluate(
@@ -122,7 +122,7 @@ result_json = result.model_dump_json()
 ### From Dictionary
 
 ```python
-from semantictest.core.models import DriftResult
+from judgeai.core.models import DriftResult
 
 result = DriftResult(
     score=0.95,
@@ -139,7 +139,7 @@ result = DriftResult(
 Pydantic validates all fields:
 
 ```python
-from semantictest.core.models import DriftResult
+from judgeai.core.models import DriftResult
 from pydantic import ValidationError
 
 try:
@@ -161,8 +161,8 @@ except ValidationError as e:
 For type-safe code:
 
 ```python
-from semantictest import SemanticJudge
-from semantictest.core.models import DriftResult
+from judgeai import SemanticJudge
+from judgeai.core.models import DriftResult
 from typing import List
 
 def evaluate_responses(

@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this software in your research, please cite it as below."
 type: software
-title: "SemanticTest: A Framework for Deterministic AI Testing"
+title: "JudgeAI: An LLM-as-a-Judge Framework for Semantic Evaluation"
 abstract: >-
-  SemanticTest provides a novel framework for deterministic evaluation of
-  large language model outputs through semantic drift detection and
+  JudgeAI provides a novel framework for semantic evaluation of
+  large language model outputs through LLM-as-a-Judge methodology and
   distributional alignment analysis. The framework implements zero-shot
   semantic comparison in latent space, enabling reproducible quality
   assurance for AI systems. By quantifying semantic entropy and factual
-  fidelity, SemanticTest addresses the critical challenge of non-deterministic
+  fidelity, JudgeAI addresses the critical challenge of non-deterministic
   evaluation in production AI applications.
 authors:
   - family-names: "Dasari"
@@ -18,8 +18,8 @@ authors:
     orcid: "https://orcid.org/0009-0002-8935-6232"
 version: 0.1.0
 date-released: 2026-01-07
-url: "https://github.com/chaitanyakumar-d/semantictest"
-repository-code: "https://github.com/chaitanyakumar-d/semantictest"
+url: "https://github.com/chaitanyakumar-d/judgeai"
+repository-code: "https://github.com/chaitanyakumar-d/judgeai"
 license: Apache-2.0
 keywords:
   - machine-learning
@@ -31,17 +31,18 @@ keywords:
   - quality-assurance
   - deterministic-evaluation
   - semantic-alignment
+  - llm-as-a-judge
 preferred-citation:
   type: software
-  title: "SemanticTest: A Framework for Deterministic AI Testing"
+  title: "JudgeAI: An LLM-as-a-Judge Framework for Semantic Evaluation"
   authors:
     - family-names: "Dasari"
       given-names: "Chaitanya Kumar"
       email: chaitanyakumar435@outlook.com
       affiliation: "Independent Researcher"
   year: 2026
-  url: "https://github.com/chaitanyakumar-d/semantictest"
-  notes: "Open-source framework for unit testing AI agents and preventing hallucinations"
+  url: "https://github.com/chaitanyakumar-d/judgeai"
+  notes: "Open-source LLM-as-a-Judge framework for semantic evaluation of AI outputs"
 references:
   - type: article
     title: "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment"

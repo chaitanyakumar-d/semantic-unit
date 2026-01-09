@@ -7,7 +7,7 @@ body:
       value: |
         ## 🎉 Show Off What You've Built!
 
-        Built something cool with SemanticTest? Share it with the community!
+        Built something cool with JudgeAI? Share it with the community!
 
   - type: textarea
     id: project
@@ -28,9 +28,9 @@ body:
   - type: textarea
     id: how
     attributes:
-      label: How You Used SemanticTest
-      description: Describe how SemanticTest helped your project
-      placeholder: "I used SemanticTest to..."
+      label: How You Used JudgeAI
+      description: Describe how JudgeAI helped your project
+      placeholder: "I used JudgeAI to..."
 
   - type: textarea
     id: lessons
